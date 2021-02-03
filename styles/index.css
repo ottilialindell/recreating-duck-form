@@ -1,0 +1,149 @@
+body{
+    background-color: #59A19A;
+}
+
+.screen {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.box-1 {
+    display: flex;
+    width: 954px;
+    height: 594px; 
+    background: #BE0909;
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
+    position:absolute;
+}
+
+.box-2 {
+    display: flex;
+    position: absolute;
+    transform:translateX(305px);
+    width: 345px;
+    height: 594px;
+    background: #FFB039;
+    z-index: 1;
+}
+
+.duck {
+    display: flex;
+    position: absolute;
+    transform: translate(196px, 52px);
+    z-index:2;
+}
+
+.form {
+    display: flex;
+	flex-direction: column;
+	align-items: stretch;
+    justify-content: end;
+    margin-top: 64px;
+    margin-left: 65px;
+}
+
+.label {
+    display: block;
+    box-sizing: border-box;
+	position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FEFFFF;
+    z-index: 3;
+}
+
+.input-field {
+    width: 400px;
+    height: 72px;
+    margin-top: 3px;
+    margin-bottom: 20px;
+    background: #BE0909;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: #9DBEBB;
+}
+
+.input-field2 {
+    width: 160px;
+    height: 72px;
+    margin-top: 3px;
+    margin-bottom: 20px;
+    background: #BE0909;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: #9DBEBB;
+}
+
+::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: 0.3em;
+    color: #FDFFFF;
+}
+
+.select-wrapper {
+    box-sizing: border-box;
+	width: 100%;
+    position: relative;
+    display: block;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    background-color:  #BE0909;
+}
+
+/* Hide arrow icon in IE browsers */
+.select-css::-ms-expand {
+    display: none;
+}
+  /* Hover style */
+.select-css:hover {
+    border-color: #888;
+}
+  /* Focus style */
+.select-css:focus {
+    border-color: #aaa;
+    /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222; 
+    outline: none;
+}
+  
+  /* Set options to normal weight */
+.select-css option {
+    font-weight:normal;
+}
+
+.select {
+    position: relative;
+    cursor: pointer;
+    -webkit-appearance: none;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.select__icon {
+    position: relative;
+    color: #850606;
+    z-index: 4;
+}
+
+.option {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+}
