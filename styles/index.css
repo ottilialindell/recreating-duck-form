@@ -38,6 +38,7 @@ body{
 }
 
 .form {
+    box-sizing: border-box;
     display: flex;
 	flex-direction: column;
 	align-items: stretch;
@@ -101,6 +102,21 @@ body{
     margin: 10px;
 }
 
+
+.select {
+    height: 18px;
+    border-width: 0px;
+    width: 350px;
+    margin: 10px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+    background-color:  #BE0909;
+    font-family: 'Roboto', sans-serif;
+    color:#FFFFFF;
+}
+
 .select-wrapper {
     box-sizing: border-box;
 	width: 100%;
@@ -110,53 +126,10 @@ body{
     background-color:  #BE0909;
 }
 
-/* Hide arrow icon in IE browsers */
-.select-css::-ms-expand {
-    display: none;
-}
-  /* Hover style */
-.select-css:hover {
-    border-color: #888;
-}
-  /* Focus style */
-.select-css:focus {
-    border-color: #aaa;
-    /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
-    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
-    box-shadow: 0 0 0 3px -moz-mac-focusring;
-    color: #222; 
-    outline: none;
-}
-  
-  /* Set options to normal weight */
-.select-css option {
-    font-weight:normal;
-}
-
-.select {
-    position: relative;
-    cursor: pointer;
-    -webkit-appearance: none;
-    background-color:  #BE0909;
-    font-family: 'Roboto', sans-serif;
-    color:#FFFFFF;
-    border-width: 0px;
-    width: 210px;
-    margin: 10px;
-}
-
 .select__icon {
-    position: relative;
-    color: #850606;
-    z-index: 4;
-}
-
-.option {
-    display: block;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
+	position: absolute;
+	z-index: 99;
+	color: #FFFFFF;
 }
 
 .label--large {
@@ -183,7 +156,7 @@ body{
 
 .button {
     position: absolute;
-    transform:translate(164px, 465px);
+    transform:translate(164px, 455px);
     width: 202px;
     height: 48px;
     background: #468189;
@@ -202,7 +175,7 @@ body{
 }
 
 .input-title {
-    position: absolute;
+    position: relative;
     width: 400px;
     margin-left: 50px;
 	line-height: 1;
@@ -215,8 +188,7 @@ body{
 }
 
 .checkbox-container {
-    position:absolute;
-    transform: translateY(430px);
+    position:relative;
 }
 
 .checkbox-label {
@@ -305,3 +277,4 @@ body{
     background-color: #9DBEBB;
     opacity: 0.6;
 }
+
