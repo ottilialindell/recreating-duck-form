@@ -76,7 +76,7 @@ body{
 }
 
 .input-field2 {
-    width: 160px;
+    width: 150px;
     height: 72px;
     margin-top: 3px;
     margin-bottom: 20px;
@@ -93,6 +93,12 @@ body{
     font-size: 18px;
     letter-spacing: 0.3em;
     color: #FDFFFF;
+}
+
+.textarea {
+    background-color:  #BE0909;
+    border-width: 0px;
+    margin: 10px;
 }
 
 .select-wrapper {
@@ -131,8 +137,12 @@ body{
     position: relative;
     cursor: pointer;
     -webkit-appearance: none;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    background-color:  #BE0909;
+    font-family: 'Roboto', sans-serif;
+    color:#FFFFFF;
+    border-width: 0px;
+    width: 210px;
+    margin: 10px;
 }
 
 .select__icon {
@@ -166,11 +176,14 @@ body{
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(254, 255, 255, 0.98);
+	background-color: transparent;
+	border-radius: 5px;
+	transition: all 0.3s ease-out;
 }
 
 .button {
     position: absolute;
-    transform:translate(164px, 460px);
+    transform:translate(164px, 465px);
     width: 202px;
     height: 48px;
     background: #468189;
@@ -190,14 +203,105 @@ body{
 
 .input-title {
     position: absolute;
-    transform: translate(0px, -27px);
+    width: 400px;
+    margin-left: 50px;
 	line-height: 1;
-	margin-left: 41px;
-	margin-top: 6px;
 	padding: 4px 0 2px 2px;
 	border-radius: 4px;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.1em;
     color: white;
+}
+
+.checkbox-container {
+    position:absolute;
+    transform: translateY(430px);
+}
+
+.checkbox-label {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	height: 24px;
+	clear: both;
+}
+
+.checkbox-label input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.checkbox-label .checkbox-custom {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 24px;
+	min-width: 24px;
+	background-color: transparent;
+	border-radius: 5px;
+	transition: all 0.3s ease-out;
+	border: 2px solid #FFB039;
+}
+
+
+.checkbox-label input:checked ~ .checkbox-custom {
+	background-color:  #FFB039;
+	border-radius: 5px;
+	transform: rotate(0deg) scale(1);
+	opacity:1;
+	border: 2px solid  #FFB039;
+}
+
+
+.checkbox-label .checkbox-custom::after {
+	position: absolute;
+	content: "";
+	left: 12px;
+	top: 12px;
+	height: 0px;
+	width: 0px;
+	border-radius: 5px;
+	border: solid #dfdfdc;
+	border-width: 0 3px 3px 0;
+	transform: rotate(0deg) scale(0);
+	opacity:1;
+	transition: all 0.3s ease-out;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom::after {
+    transform: rotate(45deg) scale(1);
+    opacity:1;
+    left: 8px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid #dfdfdc;
+    border-width: 0 2px 2px 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.input-field:focus, .textarea:focus, .select:focus, .checkbox-custom:focus, .button:focus {
+    outline: none;
+    box-shadow: 1px 1px 1px #de8484
+}
+    
+.input-field:hover, .input-field2:hover,.textarea:hover, .select:hover {
+    background-color:#c42121;
+}
+    
+.checkbox-custom:hover {
+    filter: brightness(2);
+}
+    
+.button:hover {
+    background-color: #FFB039;
+    box-shadow: none;
+}
+    
+.button:disabled {
+    background-color: #9DBEBB;
+    opacity: 0.6;
 }
