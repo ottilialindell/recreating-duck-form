@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/51caa18442.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <main class="screen">
@@ -14,14 +15,15 @@
         <div class="box-1">
             <form class="form">
 				<label for="name" class="label">Full name</label>
-                <input type="text" name="name" rows="1" id="name" class="input-field">
+                <input type="text" name="name" rows="1" id="name" class="input-field" required autofocus>
                 <label for="email" class="label">Email</label>
                 <input type="email" name="email" id="email" class="input-field2" 
                 placeholder="Your email" required autofocus>
                 <div class="select-wrapper">
                     <label for="select" class="label">Message Regarding</label>
-                    <i class="fas fa-chevron-circle-down select__icon"></i>
-                    <select name="select-message" class="select" id="select" multiple>
+                    <i class="far fa-caret-square-down select__icon"></i>
+                    <select name="select-message" class="select" id="select">
+                        <option value="" disable selected>Choose your option</option>
                         <option value="order">Ordering Duck</option>
                         <option value="disclaime">Disclaime Duck</option>
                         <option value="change">Change Duck</option>

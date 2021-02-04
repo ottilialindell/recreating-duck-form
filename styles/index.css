@@ -106,7 +106,7 @@ body{
 .select {
     height: 18px;
     border-width: 0px;
-    width: 350px;
+    width: 200px;
     margin: 10px;
     cursor: pointer;
     -webkit-appearance: none;
@@ -127,9 +127,12 @@ body{
 }
 
 .select__icon {
-	position: absolute;
+    cursor:pointer;
+    outline:none;
+    position: absolute;
+    transform:translate(195px, 11px);
 	z-index: 99;
-	color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 .label--large {
@@ -275,6 +278,6 @@ body{
     
 .button:disabled {
     background-color: #9DBEBB;
-    opacity: 0.6;
+    opacity: 0.9;
 }
 
